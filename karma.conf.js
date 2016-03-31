@@ -45,18 +45,6 @@ module.exports = function(config) {
     },
 
 
-    // list of plugins
-    plugins : [
-      'karma-mocha',
-      'karma-chai',
-      'karma-chrome-launcher',
-      'karma-firefox-launcher',
-      'karma-html2js-preprocessor',
-      'karma-phantomjs-launcher',
-      'karma-safari-launcher'
-    ],
-
-
     // test results reporter to use
     // possible values: 'dots', 'progress'
     // available reporters: https://npmjs.org/browse/keyword/karma-reporter
@@ -82,7 +70,7 @@ module.exports = function(config) {
 
     // start these browsers
     // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
-    browsers: ['Chrome', 'Firefox', 'PhantomJS', 'Safari'],
+    browsers: ['Chrome', 'Firefox', 'Safari'],
 
     captureTimeout: 60000,
 
