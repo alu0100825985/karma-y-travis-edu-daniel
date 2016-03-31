@@ -22,6 +22,7 @@ module.exports = function(config) {
         'vendor/chai.js',
         'vendor/mocha.css',
         'vendor/mocha.js',
+        'xregexp.js',
     ],
 
 
@@ -37,6 +38,17 @@ module.exports = function(config) {
         'gulpfile.js'
     ],
 
+
+    // list of plugins
+    plugins : [
+      'karma-mocha',
+      'karma-chai',
+      'karma-chrome-launcher',
+      'karma-firefox-launcher',
+      'karma-html2js-preprocessor',
+      'karma-phantomjs-launcher',
+      'karma-safari-launcher'
+    ],
 
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
@@ -70,7 +82,7 @@ module.exports = function(config) {
 
     // start these browsers
     // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
-    browsers: ['Chrome', 'Firefox', 'Safari'],
+    browsers: ['Chrome', 'Firefox', 'Safari', 'PhantomJS'],
 
     captureTimeout: 60000,
 
