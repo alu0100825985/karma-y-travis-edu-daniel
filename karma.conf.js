@@ -10,23 +10,51 @@ module.exports = function(config) {
 
     // frameworks to use
     // available frameworks: https://npmjs.org/browse/keyword/karma-adapter
-    frameworks: ['jasmine'],
+    frameworks: ['mocha', 'chai'],
 
 
     // list of files / patterns to load in the browser
     files: [
+        'js/main.js',
+        'js/medida.js',
+        'js/temperatura.js',
+        'conversor_test.js',
+        'vendor/chai.js',
+        'vendor/mocha.css',
+        'vendor/mocha.js',
     ],
 
 
+    // list of clients.
+    client: {
+          mocha: {
+            ui: 'bdd'
+          }
+    },
+
     // list of files to exclude
     exclude: [
+        'gulpfile.js'
     ],
 
 
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
     preprocessors: {
+        'test.html': ['html2js']
     },
+
+
+    // list of plugins
+    plugins : [
+      'karma-mocha',
+      'karma-chai',
+      'karma-chrome-launcher',
+      'karma-firefox-launcher',
+      'karma-html2js-preprocessor',
+      'karma-phantomjs-launcher',
+      'karma-safari-launcher'
+    ],
 
 
     // test results reporter to use
@@ -54,8 +82,9 @@ module.exports = function(config) {
 
     // start these browsers
     // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
-    browsers: ['Chrome'],
+    browsers: ['Chrome', 'Firefox', 'PhantomJS', 'Safari'],
 
+    captureTimeout: 60000,
 
     // Continuous Integration mode
     // if true, Karma captures browsers, runs the tests and exits
