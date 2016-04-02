@@ -17,6 +17,10 @@ Este repositorio aloja la práctica de Karma y Travis.
 
 * [GitHub Page](http://alu0100825985.github.io/karma-y-travis-edu-daniel/)
 
+**Travis**
+
+[![Build Status](https://travis-ci.org/alu0100812534/karma-y-travis-edu-daniel.svg?branch=master)](https://travis-ci.org/alu0100812534/karma-y-travis-edu-daniel)
+
 **Páginas Personales de los Autores**
 
 * [Página Personal de alu0100825985](http://alu0100825985.github.io./)
