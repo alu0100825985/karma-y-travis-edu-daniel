@@ -10,14 +10,14 @@ var gulp = require('gulp'),
 
 //-----> CONFIGURACIÓN DE LAS TAREAS
 gulp.task('minify-js', function() {
-  gulp.src(['js/*.js', 'conversor_test.js', 'vendor/*.js'])
+  gulp.src(['js/*.js', ,'assets/js/*.js', 'conversor_test.js', 'vendor/*.js'])
     .pipe(uglify())
     .pipe(gulp.dest('minified/js/'))
 });
 
 gulp.task('minify-css', function() {
   return gulp.src('vendor/*.css')
-    .pipe(cleancss({compatibility: 'ie8'}))
+    .pipe(cleancss())
     .pipe(gulp.dest('minified/css'));
 })
 
