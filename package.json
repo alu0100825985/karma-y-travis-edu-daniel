@@ -4,7 +4,8 @@
   "description": "Este repositorio aloja la práctica de Mocha, Chai y Sinon. Además del uso posterior de blanketjs y el fichero gulpfile.js.",
   "main": "conversor_test.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "chuchu": "mocha test",
+    "chai": "curl https://raw.githubusercontent.com/chaijs/chai/master/chai.js -o test/chai.js"
   },
   "repository": {
     "type": "git",
