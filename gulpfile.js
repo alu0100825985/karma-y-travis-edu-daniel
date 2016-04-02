@@ -5,7 +5,8 @@ var gulp = require('gulp'),
 	minify = require('gulp-minify'),
 	clean = require('gulp-clean'),
   uglify = require('gulp-uglify'),
-  cleancss = require('gulp-clean-css');
+  cleancss = require('gulp-clean-css'),
+  ghPages = require('gulp-gh-pages');
 
 //-----> CONFIGURACIÓN DE LAS TAREAS
 gulp.task('minify-js', function() {
@@ -24,6 +25,11 @@ gulp.task('minify-html', function() {
   return gulp.src('*.html')
     .pipe(htmlminify({collapseWhitespace: true}))
     .pipe(gulp.dest('minified/html'))
+});
+
+gulp.task('deploy', function() {
+  return gulp.src('./minified/**/*')
+    .pipe(ghPages({branch: "master"}));
 });
 
 gulp.task('clean', function () {
