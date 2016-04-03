@@ -47,7 +47,6 @@ module.exports = function(config) {
       'karma-firefox-launcher',
       'karma-html2js-preprocessor',
       'karma-phantomjs-launcher',
-      'karma-safari-launcher'
     ],
 
     // preprocess matching files before serving them to the browser
@@ -82,7 +81,7 @@ module.exports = function(config) {
 
     // start these browsers
     // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
-    browsers: ['Chrome', 'Firefox', 'Safari', 'PhantomJS'],
+    browsers: ['Chrome', 'Firefox', 'PhantomJS'],
 
     captureTimeout: 60000,
 
